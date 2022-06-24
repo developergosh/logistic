@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Логистическая компания в горде Нур-Сулатн" />
+    <meta name="keywords" content="Логистическая компания в горде Нур-Сулатн, логистическая компания Астана, логистическая компания" />
+    <title>DARHAN LOGISITC</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css.map">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/btns.css">
+    <link rel="stylesheet" href="css/preloder.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/authorisationForm.css">
+    <link rel="stylesheet" href="css/counter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="icon" href="img/logomini.png">
+    <script src="js/JQuery.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/counter.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</head>
+<body>
+
+<div type="button" id="whatsUp" class="email-bt">
+    <div class="text-call">
+        <i class="fa fa-whats" aria-hidden="true">
+            <img src="img/whatsapp.png" alt="написать в whatsapp">
+        </i>
+        <a href="https://wa.me/77770777777?text=заявка с сайта ELSAR.KZ" target="_blank">написать</a>
+    </div>
+</div>
+<div  class="header" id="head">
+    <div id="menu">
+        <div id="menu-toggle">
+            <div id="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <ul>
+            <li><a href="#start">Главная </a></li>
+            <li><a href="#calc-form">Стоимость</a></li>
+            <li><a href="#delivery-status">Отследить</a></li>
+            <li><a href="#about-reason">Преимущества</a></li>
+            <li><a href="#about-us">О Компании</a></li>
+            <li><a href="#map">Как проехать?</a></li>
+        </ul>
+    </div>
+</div>
+
+<section id="adminPanel" style="display: none;">
+    <div class="container mt-50 align-items-center justify-content-center">
+        <div class="title-headline mt-50 mb-30">
+            <h2>Панель администратора</h2>
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-6">
+                <div class="row">
+                    <div class="adm-panel-requests mt-10 mb-10 ">
+                        <h3 class="mt-10 mb-10" style="align-self: center; color: #242c4a">Заявка вызов курьера</h3>
+                        <div class="orders-info-table mt-10 mb-10" style="align-self: center">
+                            <span id="FioCall"></span>
+                            <span id="AdressCall"></span>
+                            <span id="WeightBoxCall"></span>
+                            <span id="TimeCall"></span>
+                            <span id="TelCall"></span>
+
+                        </div>
+                        <a href="#" class="confirm-order-btn mt-20 mb-20" style="align-self: center">Позвонить</a>
+                    </div>
+                    <div>
+
+                    </div>
+                    <div class="adm-panel-requests mt-10 mb-10">
+                        <h3 class="mt-10 mb-10" style="align-self: center; color: #242c4a">Заявка онлайн</h3>
+
+                        <div class="orders-info-table mt-10 mb-10" style="align-self: center">
+                            <span id="0"></span>
+                            <span id="1"></span>
+                            <span id="2"></span>
+                            <span id="3"></span>
+                            <span id="4"></span>
+                            <span id="5"></span>
+                            <span id="6"></span>
+                            <span id="7"></span>
+                            <span id="8"></span>
+                        </div>
+                        <a href="#" class="confirm-order-btn mt-20 mb-20" style="align-self: center">Позвонить</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="col-6">
+                <script src="js/base.js"></script>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="start">
+    <div class="container flex-column justify-content-center align-items-center">
+        <div id="my_modal2" class="modal2">
+            <div class="modal_content2">
+                <div class="modal2-infocontent">
+                    <div class="modal2-infocontent-heading">
+                        <h2>Заявка на вызов курьера</h2>
+                    </div>
+                    <div class="modal2-infocontent-text">
+
+
+
+                            <h3 class="mt-50 mb-10">Укажите Ваше имя и адрес вывоза послыки</h3>
+                            <div class="modal2-text-row mt-10 mb-10">
+                                <input type="text" id="CallKurierName"  placeholder="Ваше имя">
+                                <input type="text" id="CallKurierAdress"  placeholder="Адрес">
+                            </div>
+                            <h3>Укажите вес посылки и удобное для вас время</h3>
+                            <div class="modal2-text-row mt-10 mb-10">
+                                <input type="text" id="CallKurierBox"  placeholder="Вес вашей посылки">
+                                <input type="text" id="CallKurierTime"  placeholder="Укажите удобное время">
+                                <input type="text" id="CallKurierTel"  placeholder="Укажите телефон">
+                            </div>
+                            <div class="modal2-text-row mt-10 mb-10">
+                            <a href="#" class="closeCallBtn" id="closeCallBtn" type=submit >Оформить</a>
+                            <span class="close_modal_window2">Отмена</span>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-menu" id="top-menu">
+                    <div class="menu-top-logo-img">
+                        <a href="#" target="_blank">
+                            <img src="img/logomini.png">
+                        </a>
+                    </div>
+                    <div class="top-content-text">
+                        <h1>Грузовые перевозки в городе Нур-Султан</h1>
+                        <h2>Круглосуточно<a href="tel:+77777777777">+7-777-777-7777</a></h2>
+                    </div>
+                    <div class="menu-top-content">
+                        <i class="fa fa-globe"></i>
+                        <a href="index.html" class="Kaz">Kaz</a>
+                        <a href="index.html" class="Ru active-lang">RU</a>
+                        <a href="#" id="btn_modal_window4" class="login">|Авторизация|</a>
+                    </div>
+        </div>
+        <div id="my_modal3" class="modal2">
+            <div class="modal_content">
+                <span class="close_modal_window">X</span>
+                <div class="limiter" id="formAuth">
+                    <div class="container-login100">
+                        <div class="wrap-login100">
+                            <div class="login100-form-title" style="background-color: #3B5772;">
+					<span class="login100-form-title-1">
+						Авторизация пользователя
+					</span>
+                            </div>
+                            <form class="login100-form validate-form" id="loginForm">
+                                <div class="wrap-input100 validate-input mt-10 mb-10" data-validate="Username is required">
+                                    <span class="label-input100">Ваши ФИО</span>
+                                    <input class="input100" type="text" name="username" placeholder="Введите имя или фамилию">
+                                    <span class="focus-input100" id="fio"></span>
+                                </div>
+                                <div class="wrap-input100 validate-input mt-10 mb-10" data-validate="Username is required">
+                                    <span class="label-input100">Ваш логин</span>
+                                    <input class="input100" type="text" name="username" placeholder="Введите ваш логин">
+                                    <span class="focus-input100" id="loginInput"></span>
+                                </div>
+
+                                <div class="wrap-input100 validate-input mt-10 mb-10" data-validate = "Password is required">
+                                    <span class="label-input100">Ваш пароль</span>
+                                    <input class="input100" id="passwordInput" type="password" name="pass" placeholder="Введите ваш пароль">
+                                    <span class="focus-input100"></span>
+                                </div>
+
+                                <div class="flex-sb-m w-full mt-20 mb-20">
+                                    <div class="row align-items-center justify-content-center">
+                                        <div class="contact100-form-checkbox">
+                                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                                            <label class="label-checkbox100" for="ckb1">
+                                                запомнить
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="txt1 ml-5" id="forgot">
+                                                забыли пароль?
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-login100-form-btn">
+                                    <div class="row align-items-center justify-content-center ">
+                                        <a class="login100-form-btn" id="login-btn">
+                                            Войти
+                                        </a>
+                                        <a href="" class="backBtn" id="closeAuth">Назад</a>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="slider mt-100 mb-10">
+            <div class="slider__item">
+                <div class="info-text-slider">
+                        <p>Выгодная доставка для физических лица
+                            по фиксированной стоимости
+                        </p>
+                    <a class="btn-text mt-50" href="#calc-form">Подробнее</a>
+                </div>
+                <a class="slide-img-btn" href="#" target="_blank">
+                    <img src="img/slider/slide2.png" alt="">
+                </a>
+            </div>
+            <div class="slider__item">
+                <div class="info-text-slider">
+                    <p>Вы можете оформить
+                        отправку вашего груза ОНЛАЙН
+                    </p>
+                    <a class="btn-text mt-50" href="#calc-form">Подробнее</a>
+                </div>
+                <a class="slide-img-btn" href="#" target="_blank">
+                    <img src="img/slider/slider4.jpg" alt="">
+                </a>
+            </div>
+            <div class="slider__item">
+                <div class="info-text-slider">
+                    <p>Вы можете отследить статус вашей посылки
+                         с помощью нашего трекера
+                    </p>
+                    <a class="btn-text mt-50" href="#">Подробнее</a>
+                </div>
+                <a class="slide-img-btn" href="#" target="_blank">
+                    <img src="img/slider/slide1.png" alt="">
+                </a>
+            </div>
+            <div class="slider__item">
+                <div class="info-text-slider">
+                    <p>Доставка груза по Казахстану
+                        по фиксированной стоимости.
+                    </p>
+                </div>
+                <a class="slide-img-btn" href="#" target="_blank">
+                    <img src="img/slider/slide3.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row plate">
+                <a href="#calc-form">Калькулятор</a>
+                <a href="#" id="btn_modal_window2">Вызвать курьера</a>
+                <a href="#delivery-status">Отследить</a>
+                <a href="other/dogovor.doc" download="">Заключить договор</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="service">
+    <div class="container flex-column align-items-center justify-content-center">
+        <div class="title-headline mt-50 mb-30">
+            <h2>Заказать грузоперевозки в Астана</h2>
+        </div>
+        <div class="row mt-50 mb-50">
+            <div class="col-6 wow animate__animated animate__fadeInLeft mt-50 mb-20 ">
+                <div class="service-left-side">
+                    <img src="img/bg/delivert-box.jpeg.webp">
+                </div>
+            </div>
+            <div class="col-6 wow animate__animated animate__fadeInRight mt-50 mb-20">
+                <div class="service-right-side">
+                    <p>
+                        Прямо сейчас можно заказать грузоперевозки в городе Нур-Султан. По всем вопросам можно позвонить менеджеру компании по телефону, указанному на сайте.
+                        Специалист окажет грамотную консультацию.
+                    </p>
+                    <h3>Гарантируем сохранность вашего груза!</h3>
+                    <h4>Звоните:</h4>
+                    <a href="tel:+77777777777" class="call-text mb-10">+7-777-777-7777</a>
+                    <a href="tel:+77777077777" class="call-text mb-10">+7-777-707-7777</a>
+                    <a href="#" class="call-back-btn mt-10 mb-10" id="btn_modal_window3">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="about-reason">
+    <div class="container mt-50 flex-column align-items-center justify-content-center">
+        <div class="title-headline mt-50 mb-30">
+            <h2>Почему стоит сотрудничать с нами?</h2>
+        </div>
+        <div class="row mt-50 mb-50 d-flex align-items-center justify-content-center wow animate__animated animate__fadeInUp">
+            <div class="col-4 mt-10 mb-10">
+                <div class="why-we">
+                    <div class="why-we-subhead">
+                        <img src="img/Icons/truck.svg">
+                        <h3>Собственный автопарк</h3>
+                    </div>
+                    <p>В компании большой собственный автопарк. Все автомобили своевременно проходят технический осмотр.</p>
+                </div>
+            </div>
+            <div class="col-4 mt-10 mb-10">
+                <div class="why-we">
+                    <div class="why-we-subhead">
+                        <img src="img/Icons/courier.svg">
+                        <h3>Полный спектр услуг</h3>
+                    </div>
+                    <p>Который включает погрузку и разгрузку вещей, сборку и разборку мебели и крупногабаритных предметов интерьера.</p>
+                </div>
+            </div>
+            <div class="col-4 mt-10 mb-10">
+                <div class="why-we">
+                    <div class="why-we-subhead">
+                        <img src="img/Icons/clock.svg">
+                        <h3>Быстрее других</h3>
+                    </div>
+
+                      <p>Наши опытные водители и грузчики прибудут к Вам уже в течении 20 минут после оформления заказа.</p>
+                </div>
+            </div>
+            <div class="col-4 mt-10 mb-10">
+                <div class="why-we">
+                    <div class="why-we-subhead">
+                        <img src="img/Icons/24-hours.svg">
+                        <h3>Гибкий график</h3>
+                    </div>
+                    <p>Работаем в режиме 24/7 без выходных и праздников.</p>
+                </div>
+            </div>
+            <div class="col-4 mt-10 mb-10">
+                <div class="why-we">
+                    <div class="why-we-subhead">
+                        <img src="img/Icons/credit-card.svg">
+                        <h3>Удобно оплачивать</h3>
+                    </div>
+                    <p>Мы предоставляем все удобные способы оплаты:
+                        Наличными водителю
+                        Переводы – Kaspi Gold
+                        По банковской карте водителю</p>
+                </div>
+            </div>
+            <div class="col-4 mt-10 mb-10">
+                <div class="why-we">
+                    <div class="why-we-subhead">
+                        <img src="img/Icons/enshurance.svg">
+                        <h3>Страховка груза</h3>
+                    </div>
+                    <p>*ст.22 Закона Республики Казахстан от 01.07.2003г. No446 "Об обязательном страховании гражданско-законный ответственности собственников автотранспортных средств".</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="paralax-info">
+    <div class="parallax">
+        <div id="counter">
+            <div class="container d-flex align-items-center justify-content-between">
+                    <div class="col-4">
+                        <div class="counter-item">
+                            <div class="text-count-top"><h2>Более<br></h2></div>
+                            <div data-num="8" class="number">0</div>
+                            <div class="text-counter"><h4>Лет осуществляем деятельность в сфере грузоперевозок</h4></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="counter-item">
+                            <div class="text-count-top"><h2>Более<br></h2></div>
+                            <div data-num="187" class="number">0</div>
+                            <div class="text-counter"><h4>Парк автомобилей для отправки груза</h4></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="counter-item">
+                            <div class="text-count-top"><h2>Более<br></h2></div>
+                            <div data-num="200" class="number">0</div>
+                            <div class="text-counter"><h4>Сотрудников доставят в срок посылку</h4></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about-us">
+    <div class="container mt-50 mb-50 flex-column align-items-center justify-content-center">
+        <div class="title-headline mt-50 mb-50">
+            <h2>О Компании</h2>
+        </div>
+        <div class="row wow animate__animated animate__fadeInUp">
+            <div class="col-5 mt-20 mb-20">
+                <div class="service-left-side">
+                    <img src="img/logo.PNG" style="width: 100%" height="100%">
+                </div>
+            </div>
+            <div class="col-7 mt-20 mb-20">
+                <div class="about-company">
+                    <h3>DARHAN LOGISTIC <br> это компания опытных профессионалов</h3>
+                    <p>
+                        В компании имеется собственный парк автомобилей,
+                        в наличии более 187 единиц техники.
+                        Выбор в пользу данной марки осуществлен неслучайно.
+                        На доставку товаров, переезд газель подходит как нельзя лучше.
+                        В списке ее полезных качеств:
+                    </p>
+                    <h4>Гарантии и условия</h4>
+                    <p>
+                        Ваш груз надежно застрахован, мы несем полную материальную ответственность за вверенное имущество.
+                        Вы можете быть спокойны за его сохранность и своевременный привоз.
+                        У нас лучшие цены на грузоперевозки и выгодные предложения,
+                        позволяющие существенно сэкономить.
+                    </p>
+                    <h4>Положительная репутация</h4>
+                    <p>
+                        Отзывы довольных клиентов подтверждают наше стремление оказать действительно качественные услуги.
+                        В день к нам обращаются несколько сотен людей и организаций, каждому лицу мы готовы предоставить сервис высокого уровня.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="calc-form">
+    <div class="container mt-50 flex-column align-items-center justify-content-center">
+        <div class="title-headline mt-50 mb-30">
+            <h2>Рассчитать стоимость отправки</h2>
+        </div>
+        <div class="col-12">
+            <div class="calc-heading-text mt-50 mb-20">
+                <h3>На часто задаваемый вопрос, как узнать стоимость отправки груза?
+                    Мы подготовили онлайн калькулятор. Теперь вы можете легко уточнить стоимость отправки груза. И оформить доставку вашего груза онлайн
+                </h3>
+            </div>
+        </div>
+        <div class="background mt-50  mb-30 wow animate__animated animate__fadeInUp">
+            <div class="row ">
+
+                    <div class="col-lg-4 col-md-4">
+                        <div class="users">
+                            <h3 class="h-3-black-text mb-20">Вид посылки</h3>
+                            <img class="img-calc" src="img/Icons/delivery.svg">
+                            <select name=""  id="userCount" onchange="changeCalcValue();" class="form-control input internet-form__input">
+                                <option value="" selected=""></option>
+                                <option value="5000">1. Посылка стандарт до 20кг</option>
+                                <option value="15000">2. Посылка до 50кг</option>
+                                <option value="25000">3. Посылка до 100кг</option>
+                                <option value="40000">4. Посылка до 200кг</option>
+                                <option value="200000">5. Газель 1 тонна</option>
+                                <option value="250000">6. Газель 1.5 тонна</option>
+                                <option value="300000">7. Газель 3 тонны</option>
+                                <option value="400000">8. Фура 5 тонн</option>
+                                <option value="450000">9. Фура от 6 до 9 тонн</option>
+                                <option value="500000">10. Фура 10 тонн</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="user-service">
+                            <h3 class="h-3-black-text mb-20">Направление</h3>
+                            <img class="img-calc" src="img/Icons/City.svg">
+                            <select name=""   id="speciality" onchange="changeCalcValue();" class="form-control input internet-form__input">
+                                <option value="1">Нур-Султан</option>
+                                <option value="2">Алматы</option>
+                                <option value="2.1">Шимкент</option>
+                                <option value="2.1">Тараз</option>
+                                <option value="4">Актау</option>
+                                <option value="4">Атырау</option>
+                                <option value="4.5">Актобе</option>
+                                <option value="4.5">Уральск</option>
+                                <option value="3">Кызылорда</option>
+                                <option value="1.8">Караганда</option>
+                                <option value="1.6">Кокшетау</option>
+                                <option value="2">Костанай</option>
+                                <option value="1.6">Акмолинская область</option>
+                                <option value="2.7">Алматинская область</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="result">
+                            <h3 class="h-3-black-text mb-20">Стоимость доставки</h3>
+                            <div class="border-result mt-30 mb-30">
+                                <span id="megabyte"  class="mt-40 mb-50" >0 </span>
+                            </div>
+                            <h3 class="h-3-black-text">Тенге</h3>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    <div class="col-12 mb-50">
+        <div class="request-form" id="requestForm">
+            <h3 class="mt-10 mb-20">Теперь вы знаете стоимость отправки, желаете оформить заявку на вывоз груза?</h3>
+            <button class="mt-10 mb-20" id="btn_modal_window">Оформить</button>
+
+
+            <div id="my_modal" class="modal">
+                <div class="modal_content">
+                    <span class="close_modal_window" id="span-close">×</span>
+                    <div class="modal-request-table mt-20 mb-20">
+                        <h4 class="mt-10 mb-10" style="font-weight: bold">Пожалуйста заполните персональные данные</h4>
+                        <div class="span-row-order">
+                            <span>1. ФИО:</span>
+                            <input type="text" id="FioOrder" placeholder="Введите Имя и фамилию">
+                        </div>
+                        <span id="info-box-to-send">2.Вид посылки:</span>
+                        <span id="delivery-to">3. Направление:</span>
+                        <span id="status-delivery">4. Статус доставки:<strong> ожидает курьера</strong></span>
+                        <span id="delivery-term">5. Срок доставки: <strong> 24 часа</strong></span>
+                        <span>6.
+                            <select name="pay-method" id="pay-method" class="form-control input internet-form__input">
+                            <option value="" selected=""></option>
+                            <option value="Наличные">Наличные</option>
+                            <option value="Kaspi">Kaspi</option>
+                            <option value="Банковская карта">Банковская карта</option>
+                            <option value="Договор">Договор</option>
+                        </select>
+                        </span>
+
+                        <span id="delivery-cost-span">7. Сумма доставки:</span>
+                        <span id="trackerNumber">8. № Трекера: Nur2000</span>
+                        <a class="confirm-order-btn" id="cofirmOrderBtn">Подтверждаю</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+</section>
+
+
+
+<section id="delivery-status">
+    <div class="container mt-50 flex-column align-items-center justify-content-center">
+        <div class="title-headline mt-50 mb-30">
+            <h2>Отследить доставку</h2>
+        </div>
+        <div class="col-12">
+            <div class="calc-heading-text mt-50 mb-20">
+                <h3> Вы можете отследить статус вашей доставки, указав ваш "номер трекера" в нижнем окне</h3>
+            </div>
+            <div class="row">
+                <div class="col-6  mt-50 mb-50 wow animate__animated animate__fadeInLeft">
+                    <div class="form-input mb-50">
+                        <input type="text" class="input-tracker" id="inputTracker" placeholder="Введите номер">
+                        <a class="searchBtnInput" id="searchBtnInput">Найти</a>
+                    </div>
+                    <h3 class="mt-10 mb-10 h3status">Информация о статусе будет отображена в таблице:</h3>
+                    <div class="delivery-info-table-col-6 mt-10 mb-10">
+                        <span class="mt-10 mb-10" id="deliveryFormInfoSpan"></span>
+                    </div>
+                </div>
+                <div class="col-6 mt-50 mb-50 wow animate__animated animate__fadeInRight " style="overflow: hidden">
+                    <div class="serh-img" >
+                        <img src="img/bg/logisticinfo.jpg"  >
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="map">
+    <div class="container mt-50 flex-column align-items-center justify-content-center">
+        <div class="title-headline mt-50 mb-30">
+            <h2>Наш офис в Нур-Султан</h2>
+        </div>
+        <div class="col-12 mt-40 mb-50 wow animate__animated animate__fadeInUp">
+            <img src="img/bg/map.PNG" class="map" alt="">
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container  flex-column align-items-center justify-content-center">
+        <h2>DARHAN LOGISTIC 2022</h2>
+    </div>
+</footer>
+
+<!--
+<script>
+    // Preloader page
+    jQuery(document).ready(function($) {
+        $(window).on('load', function () {
+            var $preloader = $('.preloader'),
+                $loader = $preloader.find('.preloader__loader');
+            $loader.fadeOut();
+            $preloader.delay(600).fadeOut(600);
+        });
+    });
+</script>
+-->
+<script src="js/modal.js"></script>
+<script src="js/modal2.js"></script>
+<script src="js/modal3.js"></script>
+<script src="js/orderform.js"></script>
+<script src="js/calc.js"></script>
+<script src="js/JQuery.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/header.js"></script>
+</body>
+</html>
